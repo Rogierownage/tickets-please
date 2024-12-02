@@ -14,6 +14,8 @@ class TicketResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
+        $includes = new UserResource($this->whenLoaded('user'));
+
         return [
             'type' => 'ticket',
             'id' => $this->id,
@@ -34,13 +36,11 @@ class TicketResource extends JsonResource
                         'id' => $this->user->id,
                     ],
                     'links' => [
-                        'self' => route('user.show', ['user' => $this->user->id]),
+                        'self' => route('author.show', ['author' => $this->user->id]),
                     ],
                 ],
             ],
-            'includes' => [
-                new UserResource($this->user),
-            ],
+            'includes' => $includes,
             'links' => [
                 'self' => route('ticket.show', ['ticket' => $this->id]),
             ]
