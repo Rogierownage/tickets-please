@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->apiResource('ticket', TicketController::class);
-Route::middleware('auth:sanctum')->apiResource('author', AuthorController::class);
-Route::middleware('auth:sanctum')->apiResource('author.ticket', AuthorTicketController::class);
+Route::middleware('auth:sanctum')->group(function () {
+    Route::apiResource('ticket', TicketController::class);
+    Route::apiResource('author', AuthorController::class);
+    Route::apiResource('author.ticket', AuthorTicketController::class);
+});

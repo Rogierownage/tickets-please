@@ -25,12 +25,11 @@ class TicketController extends ApiController
         return TicketResource::collection($query->paginate());
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(StoreTicketRequest $request)
     {
-        //
+        $ticket = Ticket::create($request->mappedAttributes());
+
+        return new TicketResource($ticket);
     }
 
     public function show(Ticket $ticket) : TicketResource
@@ -42,19 +41,17 @@ class TicketController extends ApiController
         return new TicketResource($ticket);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateTicketRequest $request, Ticket $ticket)
+    public function update(Ticket $ticket, UpdateTicketRequest $request): TicketResource
     {
-        //
+        $ticket->update($request->mappedAttributes());
+
+        return new TicketResource($ticket);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(Ticket $ticket)
     {
-        //
+        $ticket->delete();
+
+        $this->ok();
     }
 }

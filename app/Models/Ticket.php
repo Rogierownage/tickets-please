@@ -10,6 +10,16 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Ticket extends Model
 {
+    /**
+     * @var array<int, string>
+     */
+    protected $fillable = [
+        'title',
+        'description',
+        'status',
+        'user_id',
+    ];
+
     use HasFactory;
 
     public function user(): BelongsTo
