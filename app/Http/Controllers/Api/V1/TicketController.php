@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api\V1;
 
 use App\Http\Filters\V1\TicketFilter;
+use App\Http\Requests\Api\V1\DeleteTicketRequest;
 use App\Http\Requests\Api\V1\StoreTicketRequest;
 use App\Http\Requests\Api\V1\UpdateTicketRequest;
 use App\Http\Resources\Api\V1\TicketResource;
@@ -27,7 +28,13 @@ class TicketController extends ApiController
 
     public function store(StoreTicketRequest $request)
     {
-        $ticket = Ticket::create($request->mappedAttributes());
+        $postedData = $request->mappedAttributes();
+
+        if (empty($postedData['user_id'])) {
+            $postedData['user_id'] = $request->user()->id;
+        }
+
+        $ticket = Ticket::create($postedData);
 
         return new TicketResource($ticket);
     }
@@ -48,7 +55,8 @@ class TicketController extends ApiController
         return new TicketResource($ticket);
     }
 
-    public function destroy(Ticket $ticket)
+    /** @SuppressWarnings(PHPMD) */
+    public function destroy(Ticket $ticket, DeleteTicketRequest $request)
     {
         $ticket->delete();
 

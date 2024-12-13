@@ -2,18 +2,18 @@
 
 namespace App\Http\Requests\Api\V1;
 
+use App\Http\Requests\Api\BaseRequest;
 use App\Models\User;
-use Illuminate\Foundation\Http\FormRequest;
+use App\Policies\V1\TicketPolicy;
 use Illuminate\Validation\Rule;
 
-class BaseTicketRequest extends FormRequest
+class BaseTicketRequest extends BaseRequest
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     */
-    public function authorize(): bool
+    public function __construct()
     {
-        return true;
+        $this->policyClass = TicketPolicy::class;
+
+        parent::__construct();
     }
 
     /**
