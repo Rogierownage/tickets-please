@@ -11,8 +11,10 @@ abstract class BaseRequest extends FormRequest
 
     public function __construct()
     {
-        Gate::guessPolicyNamesUsing(function () {
-            return $this->policyClass;
-        });
+        if ($this->policyClass) {
+            Gate::guessPolicyNamesUsing(function () {
+                return $this->policyClass;
+            });
+        }
     }
 }
