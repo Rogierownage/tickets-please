@@ -11,9 +11,9 @@ class BaseTicketRequest extends BaseRequest
 {
     public function __construct()
     {
-        $this->policyClass = TicketPolicy::class;
-
         parent::__construct();
+
+        $this->policyClass = TicketPolicy::class;
     }
 
     /**

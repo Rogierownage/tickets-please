@@ -22,14 +22,6 @@ class AuthorController extends ApiController
         return UserResource::collection($query->paginate());
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(StoreUserRequest $request)
-    {
-        //
-    }
-
     public function show(User $author)
     {
         if ($this->include('tickets')) {
@@ -37,21 +29,5 @@ class AuthorController extends ApiController
         }
 
         return new UserResource($author);
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateUserRequest $request, User $author)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(User $author)
-    {
-        //
     }
 }

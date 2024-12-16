@@ -18,6 +18,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('ticket', TicketController::class);
-    Route::apiResource('author', AuthorController::class);
-    Route::apiResource('author.ticket', AuthorTicketController::class);
+    Route::apiResource('author', AuthorController::class)->except(['store', 'update', 'destroy']);
+    Route::apiResource('author.ticket', AuthorTicketController::class)->except(['show', 'update', 'destroy']);
 });
