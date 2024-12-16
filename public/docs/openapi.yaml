@@ -50,12 +50,12 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: sean26@example.com
+                  example: balistreri.marina@example.net
                   nullable: false
                 password:
                   type: string
                   description: ''
-                  example: 'z.GH2HjpAG(w!v,J'
+                  example: 'W?rFIcxNaI'
                   nullable: false
               required:
                 - email
@@ -823,7 +823,7 @@ paths:
                         description:
                           type: string
                           description: ''
-                          example: 'Deleniti illo voluptas placeat ut.'
+                          example: 'Ipsum nobis unde rerum neque adipisci voluptatem sed.'
                           nullable: false
                         status:
                           type: string
@@ -1644,7 +1644,7 @@ paths:
                         description:
                           type: string
                           description: ''
-                          example: 'Et ea excepturi ut eaque.'
+                          example: 'Enim dolor nisi doloremque neque nemo.'
                           nullable: false
                         status:
                           type: string
@@ -1677,7 +1677,7 @@ paths:
                                 id:
                                   type: integer
                                   description: 'The author to assign the ticket to. The <code>id</code> of an existing record in the users table.'
-                                  example: 2
+                                  example: 18
                                   nullable: false
               required:
                 - data
@@ -1805,12 +1805,12 @@ paths:
                         description:
                           type: string
                           description: ''
-                          example: 'Praesentium soluta est fuga odio est.'
+                          example: 'Minus vel dolorum modi iste.'
                           nullable: false
                         status:
                           type: string
                           description: ''
-                          example: A
+                          example: X
                           nullable: false
                           enum:
                             - A
@@ -1838,7 +1838,7 @@ paths:
                                 id:
                                   type: integer
                                   description: 'The author to assign the ticket to. The <code>id</code> of an existing record in the users table.'
-                                  example: 6
+                                  example: 20
                                   nullable: false
               required:
                 - data
@@ -1877,12 +1877,12 @@ paths:
                         description:
                           type: string
                           description: ''
-                          example: 'Cumque sit voluptate sit consequatur id fugiat.'
+                          example: 'Dolores magni quia vero fuga ut dolores voluptas commodi.'
                           nullable: false
                         status:
                           type: string
                           description: ''
-                          example: H
+                          example: C
                           nullable: false
                           enum:
                             - A
@@ -1910,7 +1910,7 @@ paths:
                                 id:
                                   type: integer
                                   description: 'The author to assign the ticket to. The <code>id</code> of an existing record in the users table.'
-                                  example: 5
+                                  example: 14
                                   nullable: false
               required:
                 - data

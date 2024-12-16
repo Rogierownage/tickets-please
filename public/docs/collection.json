@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Tickets Please API Documentation",
-        "_postman_id": "50bc9890-95ac-4585-b16b-ca806e625ae5",
+        "_postman_id": "baa3ef7a-824f-43db-8129-763d616c5ecf",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"sean26@example.com\",\"password\":\"z.GH2HjpAG(w!v,J\"}"
+                            "raw": "{\"email\":\"balistreri.marina@example.net\",\"password\":\"W?rFIcxNaI\"}"
                         },
                         "description": "Authenticates the user and returns your generated API token.",
                         "auth": {
@@ -128,7 +128,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "52"
+                                    "value": "57"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -189,7 +189,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "51"
+                                    "value": "56"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -250,7 +250,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "50"
+                                    "value": "55"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -293,7 +293,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"data\":{\"attributes\":{\"title\":null,\"description\":\"Deleniti illo voluptas placeat ut.\",\"status\":\"X\"}}}"
+                            "raw": "{\"data\":{\"attributes\":{\"title\":null,\"description\":\"Ipsum nobis unde rerum neque adipisci voluptatem sed.\",\"status\":\"X\"}}}"
                         },
                         "description": ""
                     },
@@ -364,7 +364,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "54"
+                                    "value": "59"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -399,7 +399,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"data\":{\"attributes\":{\"title\":null,\"description\":\"Et ea excepturi ut eaque.\",\"status\":\"X\"},\"relationships\":{\"author\":{\"data\":{\"id\":2}}}}}"
+                            "raw": "{\"data\":{\"attributes\":{\"title\":null,\"description\":\"Enim dolor nisi doloremque neque nemo.\",\"status\":\"X\"},\"relationships\":{\"author\":{\"data\":{\"id\":18}}}}}"
                         },
                         "description": "Create a new ticket. The ticket's author is set to the authenticated user, except for managers, who must supply the author_id."
                     },
@@ -453,7 +453,7 @@
                                 },
                                 {
                                     "key": "x-ratelimit-remaining",
-                                    "value": "53"
+                                    "value": "58"
                                 },
                                 {
                                     "key": "access-control-allow-origin",
@@ -496,7 +496,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"data\":{\"attributes\":{\"title\":null,\"description\":\"Praesentium soluta est fuga odio est.\",\"status\":\"A\"},\"relationships\":{\"author\":{\"data\":{\"id\":6}}}}}"
+                            "raw": "{\"data\":{\"attributes\":{\"title\":null,\"description\":\"Minus vel dolorum modi iste.\",\"status\":\"X\"},\"relationships\":{\"author\":{\"data\":{\"id\":20}}}}}"
                         },
                         "description": "Display a paginated list of tickets."
                     },
@@ -532,7 +532,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"data\":{\"attributes\":{\"title\":null,\"description\":\"Cumque sit voluptate sit consequatur id fugiat.\",\"status\":\"H\"},\"relationships\":{\"author\":{\"data\":{\"id\":5}}}}}"
+                            "raw": "{\"data\":{\"attributes\":{\"title\":null,\"description\":\"Dolores magni quia vero fuga ut dolores voluptas commodi.\",\"status\":\"C\"},\"relationships\":{\"author\":{\"data\":{\"id\":14}}}}}"
                         },
                         "description": "Display a paginated list of tickets."
                     },
