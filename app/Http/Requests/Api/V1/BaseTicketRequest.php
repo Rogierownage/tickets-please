@@ -23,15 +23,22 @@ class BaseTicketRequest extends BaseRequest
     {
         $requiredRule = $this->route('ticket') ? 'nullable' : 'required';
 
-        $userIds = User::pluck('id')->toArray();
         $rules = [
+            'data' => ['required', 'array'],
+            'data.attributes' => ['required', 'array'],
             'data.attributes.title' => [$requiredRule, 'string'],
             'data.attributes.description' => [$requiredRule, 'string'],
             'data.attributes.status' => [$requiredRule, 'string', Rule::in(['A','C','H','X'])],
         ];
 
         if ($this->routeIs('ticket.*')) {
-            $rules['data.relationships.author.data.id'] = [$requiredRule, 'integer', Rule::in($userIds)];
+            $rules = array_merge($rules, [
+                'data' => [$requiredRule, 'array'],
+                'data.relationships' => [$requiredRule, 'array'],
+                'data.relationships.author' => [$requiredRule, 'array'],
+                'data.relationships.author.data' => [$requiredRule, 'array'],
+                'data.relationships.author.data.id' => [$requiredRule, 'integer', 'exists:users,id'],
+            ]);
         }
 
         return $rules;
