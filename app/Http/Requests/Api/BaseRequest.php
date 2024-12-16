@@ -11,7 +11,7 @@ abstract class BaseRequest extends FormRequest
 
     public function __construct()
     {
-        if ($this->policyClass) {
+        if (isset($this->policyClass)) {
             Gate::guessPolicyNamesUsing(function () {
                 return $this->policyClass;
             });
