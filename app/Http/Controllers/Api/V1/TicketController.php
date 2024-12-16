@@ -13,7 +13,14 @@ use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 class TicketController extends ApiController
 {
     /**
-     * Display a listing of the resource.
+     * Ticket overview
+     *
+     * Display a paginated list of tickets.
+     *
+     * @group Ticket
+     * @queryParam sort string The data fields to sort by. Comma separated. Descending sort is done by prefixing with a minus sign. Example: status,-title
+     * @queryParam filter[status] Filter by status code. Available options: A, C, H, X. No-example
+     * @queryParam filter[title] Filter by title. Wildcards are supported. Example: *Refinement*
      */
     public function index(TicketFilter $filters): AnonymousResourceCollection
     {
@@ -26,6 +33,13 @@ class TicketController extends ApiController
         return TicketResource::collection($query->paginate());
     }
 
+    /**
+     * Ticket store
+     *
+     * Create a new ticket. The ticket's author is set to the authenticated user, except for managers, who must supply the author_id.
+     *
+     * @group Ticket
+     */
     public function store(StoreTicketRequest $request)
     {
         $postedData = $request->mappedAttributes();
@@ -39,6 +53,13 @@ class TicketController extends ApiController
         return new TicketResource($ticket);
     }
 
+    /**
+     * Ticket show
+     *
+     * Display a single ticket's details.
+     *
+     * @group Ticket
+     */
     public function show(Ticket $ticket) : TicketResource
     {
         if ($this->include('author')) {
@@ -48,6 +69,13 @@ class TicketController extends ApiController
         return new TicketResource($ticket);
     }
 
+    /**
+     * Ticket overview
+     *
+     * Display a paginated list of tickets.
+     *
+     * @group Ticket
+     */
     public function update(Ticket $ticket, UpdateTicketRequest $request): TicketResource
     {
         $ticket->update($request->mappedAttributes());
@@ -55,7 +83,15 @@ class TicketController extends ApiController
         return new TicketResource($ticket);
     }
 
-    /** @SuppressWarnings(PHPMD) */
+    /**
+     * Ticket overview
+     *
+     * Display a paginated list of tickets.
+     *
+     * @group Ticket
+     *
+     * @SuppressWarnings(PHPMD)
+     */
     public function destroy(Ticket $ticket, DeleteTicketRequest $request)
     {
         $ticket->delete();

@@ -11,6 +11,21 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthController extends ApiController
 {
+    /**
+     * Login
+     *
+     * Authenticates the user and returns your generated API token.
+     *
+     * @unauthenticated
+     * @group Authentication
+     * @response 200 {
+    "message": "Authenticated",
+    "data": {
+        "token": "15|XpIxvsWpD5oVfVZRWN05Tz0wOg4pL4cNuCstfM5h1157c728"
+    },
+    "status ": 200
+     * }
+     */
     public function login(LoginUserRequest $request)
     {
         if (!Auth::attempt($request->only(['email', 'password']))) {
@@ -27,6 +42,14 @@ class AuthController extends ApiController
             )->plainTextToken,
         ]);
     }
+
+    /**
+     * Logout
+     *
+     * Signs out the authenticated user and destroys the API token.
+     *
+     * @group Authentication
+     */
 
     public function logout(Request $request)
     {

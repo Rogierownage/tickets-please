@@ -3,7 +3,6 @@
 namespace App\Http\Requests\Api\V1;
 
 use App\Http\Requests\Api\BaseRequest;
-use App\Models\User;
 use App\Policies\V1\TicketPolicy;
 use Illuminate\Validation\Rule;
 
@@ -42,6 +41,26 @@ class BaseTicketRequest extends BaseRequest
         }
 
         return $rules;
+    }
+
+    public function bodyParameters()
+    {
+        $documentation = [
+            'data.attributes.title' => [
+                'description' => 'The ticket\'s title.',
+                'example' => null,
+            ],
+        ];
+
+        if ($this->routeIs('ticket.*')) {
+            $documentation = array_merge($documentation, [
+                'data.relationships.author.data.id' => [
+                    'description' => 'The author to assign the ticket to.',
+                ],
+            ]);
+        }
+
+        return $documentation;
     }
 
     public function messages() : array

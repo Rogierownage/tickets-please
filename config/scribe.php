@@ -34,7 +34,7 @@ return [
 
             // Exclude these routes even if they matched the rules above.
             'exclude' => [
-                // 'GET /health', 'admin.*'
+                'POST api/register', // This route doesn't do anything. It's just here because the laracast course included it.
             ],
         ],
     ],

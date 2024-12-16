@@ -1,0 +1,264 @@
+name: Endpoints
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/author
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"type":"user","id":1,"attributes":{"name":"Jared Hill","email":"francesco.wuckert@example.com","emailVerifiedAt":"2024-12-09T13:16:01.000000Z","createdAt":"2024-12-09T13:16:02.000000Z","updatedAt":"2024-12-09T13:16:02.000000Z"}},{"type":"user","id":2,"attributes":{"name":"Prof. Agnes Buckridge I","email":"preston.nicolas@example.org","emailVerifiedAt":"2024-12-09T13:16:02.000000Z","createdAt":"2024-12-09T13:16:02.000000Z","updatedAt":"2024-12-09T13:16:02.000000Z"}},{"type":"user","id":3,"attributes":{"name":"Lindsey Kling","email":"yvette.schultz@example.com","emailVerifiedAt":"2024-12-09T13:16:02.000000Z","createdAt":"2024-12-09T13:16:02.000000Z","updatedAt":"2024-12-09T13:16:02.000000Z"}},{"type":"user","id":4,"attributes":{"name":"Mercedes Adams III","email":"michale99@example.com","emailVerifiedAt":"2024-12-09T13:16:02.000000Z","createdAt":"2024-12-09T13:16:02.000000Z","updatedAt":"2024-12-09T13:16:02.000000Z"}},{"type":"user","id":5,"attributes":{"name":"Joaquin Lebsack","email":"tjenkins@example.com","emailVerifiedAt":"2024-12-09T13:16:02.000000Z","createdAt":"2024-12-09T13:16:02.000000Z","updatedAt":"2024-12-09T13:16:02.000000Z"}},{"type":"user","id":6,"attributes":{"name":"Rollin Robel","email":"nienow.jerome@example.net","emailVerifiedAt":"2024-12-09T13:16:02.000000Z","createdAt":"2024-12-09T13:16:02.000000Z","updatedAt":"2024-12-09T13:16:02.000000Z"}},{"type":"user","id":7,"attributes":{"name":"Brayan Cummings Sr.","email":"ruecker.lamar@example.org","emailVerifiedAt":"2024-12-09T13:16:02.000000Z","createdAt":"2024-12-09T13:16:02.000000Z","updatedAt":"2024-12-09T13:16:02.000000Z"}},{"type":"user","id":8,"attributes":{"name":"Dr. Ashleigh Runolfsdottir","email":"darryl.pfeffer@example.com","emailVerifiedAt":"2024-12-09T13:16:02.000000Z","createdAt":"2024-12-09T13:16:02.000000Z","updatedAt":"2024-12-09T13:16:02.000000Z"}},{"type":"user","id":9,"attributes":{"name":"Wendell Langosh","email":"nicole.crooks@example.org","emailVerifiedAt":"2024-12-09T13:16:02.000000Z","createdAt":"2024-12-09T13:16:02.000000Z","updatedAt":"2024-12-09T13:16:02.000000Z"}},{"type":"user","id":10,"attributes":{"name":"Emilie Considine I","email":"gfriesen@example.com","emailVerifiedAt":"2024-12-09T13:16:02.000000Z","createdAt":"2024-12-09T13:16:02.000000Z","updatedAt":"2024-12-09T13:16:02.000000Z"}},{"type":"user","id":11,"attributes":{"name":"Cade Schamberger","email":"rogier.vandenberg+manager@paqt.com","emailVerifiedAt":"2024-12-09T13:16:02.000000Z","createdAt":"2024-12-09T13:16:02.000000Z","updatedAt":"2024-12-09T13:16:02.000000Z"}},{"type":"user","id":12,"attributes":{"name":"Kassandra Bogisich II","email":"rogier.vandenberg+employee@paqt.com","emailVerifiedAt":"2024-12-09T13:16:02.000000Z","createdAt":"2024-12-09T13:16:02.000000Z","updatedAt":"2024-12-09T13:16:02.000000Z"}}],"links":{"first":"http:\/\/tickets-please.localtest.me\/api\/v1\/author?page=1","last":"http:\/\/tickets-please.localtest.me\/api\/v1\/author?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/tickets-please.localtest.me\/api\/v1\/author?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/tickets-please.localtest.me\/api\/v1\/author","per_page":15,"to":12,"total":12}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '52'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 3eedXkQH3l0q9RhiPXkmJauKAhzCYxHDtZUaAN2p55edcfeb'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/v1/author/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the author.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":{"type":"user","id":1,"attributes":{"name":"Jared Hill","email":"francesco.wuckert@example.com","emailVerifiedAt":"2024-12-09T13:16:01.000000Z","createdAt":"2024-12-09T13:16:02.000000Z","updatedAt":"2024-12-09T13:16:02.000000Z"}}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '51'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 3eedXkQH3l0q9RhiPXkmJauKAhzCYxHDtZUaAN2p55edcfeb'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/v1/author/{author_id}/ticket'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      author_id:
+        name: author_id
+        description: 'The ID of the author.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      author_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"type":"ticket","id":57,"attributes":{"title":"nemo harum commodi","status":"X","createdAt":"2024-12-09T13:16:02.000000Z","updatedAt":"2024-12-09T13:16:02.000000Z"},"relationships":{"author":{"data":{"type":"user","id":1},"links":{"self":"http:\/\/tickets-please.localtest.me\/api\/v1\/author\/1"}}},"links":{"self":"http:\/\/tickets-please.localtest.me\/api\/v1\/ticket\/57"}},{"type":"ticket","id":73,"attributes":{"title":"voluptatem eveniet incidunt","status":"X","createdAt":"2024-12-09T13:16:02.000000Z","updatedAt":"2024-12-09T13:16:02.000000Z"},"relationships":{"author":{"data":{"type":"user","id":1},"links":{"self":"http:\/\/tickets-please.localtest.me\/api\/v1\/author\/1"}}},"links":{"self":"http:\/\/tickets-please.localtest.me\/api\/v1\/ticket\/73"}},{"type":"ticket","id":90,"attributes":{"title":"quas dolores doloribus","status":"A","createdAt":"2024-12-09T13:16:02.000000Z","updatedAt":"2024-12-09T13:16:02.000000Z"},"relationships":{"author":{"data":{"type":"user","id":1},"links":{"self":"http:\/\/tickets-please.localtest.me\/api\/v1\/author\/1"}}},"links":{"self":"http:\/\/tickets-please.localtest.me\/api\/v1\/ticket\/90"}},{"type":"ticket","id":94,"attributes":{"title":"officiis officiis id","status":"A","createdAt":"2024-12-09T13:16:02.000000Z","updatedAt":"2024-12-09T13:16:02.000000Z"},"relationships":{"author":{"data":{"type":"user","id":1},"links":{"self":"http:\/\/tickets-please.localtest.me\/api\/v1\/author\/1"}}},"links":{"self":"http:\/\/tickets-please.localtest.me\/api\/v1\/ticket\/94"}}],"links":{"first":"http:\/\/tickets-please.localtest.me\/api\/v1\/author\/1\/ticket?page=1","last":"http:\/\/tickets-please.localtest.me\/api\/v1\/author\/1\/ticket?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/tickets-please.localtest.me\/api\/v1\/author\/1\/ticket?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/tickets-please.localtest.me\/api\/v1\/author\/1\/ticket","per_page":15,"to":4,"total":4}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '50'
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 3eedXkQH3l0q9RhiPXkmJauKAhzCYxHDtZUaAN2p55edcfeb'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/v1/author/{author_id}/ticket'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      author_id:
+        name: author_id
+        description: 'The ID of the author.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      author_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      data:
+        name: data
+        description: ''
+        required: true
+        example: []
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.attributes:
+        name: data.attributes
+        description: ''
+        required: true
+        example: []
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.attributes.title:
+        name: data.attributes.title
+        description: "The ticket's title."
+        required: true
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.attributes.description:
+        name: data.attributes.description
+        description: ''
+        required: true
+        example: 'Deleniti illo voluptas placeat ut.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.attributes.status:
+        name: data.attributes.status
+        description: ''
+        required: true
+        example: X
+        type: string
+        enumValues:
+          - A
+          - C
+          - H
+          - X
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      data:
+        attributes:
+          title: null
+          description: 'Deleniti illo voluptas placeat ut.'
+          status: X
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 3eedXkQH3l0q9RhiPXkmJauKAhzCYxHDtZUaAN2p55edcfeb'
+    controller: null
+    method: null
+    route: null
+    custom: []
